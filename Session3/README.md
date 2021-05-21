@@ -17,7 +17,8 @@ Test Accuracy  : 96.76%
  ----   
 Jayasankar Raju S - muralis2raj@gmail.com     
 CV Chiranthan - chiranthancv95@gmail.com <br>
-Sarthak
+Sarthak - sarthak221995@gmail.com<br>
+Mayank Singhal - singhal.mayank77@gmail.com<br>
 
 
 ---
