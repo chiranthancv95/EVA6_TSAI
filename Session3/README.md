@@ -16,7 +16,7 @@ Test Accuracy  : 96.76%
  Team
  ----   
 Jayasankar Raju S - muralis2raj@gmail.com     
-CV Chiranthan - chiranthancv95@gmail.com
+CV Chiranthan - chiranthancv95@gmail.com <br>
 Sarthak
 
 
@@ -61,7 +61,7 @@ In the __getitem__ method, along with x1 and y1, x2(newly generated Random Numbe
 ---
 ![Model View](Assignment.png)
 
-Model is designed in syn with the above structure    
+Model is designed in sync with the above structure    
     1) Blue's are inputs    
     2) Red's actual network    
     3) Green's are output    
@@ -76,4 +76,5 @@ Test data of Mnist coupled with random generated digit and sum(digit+random digi
 
 ![Results](results.png)
 
+## For improvement - 
 No of Epochs could have been reduced using the LRScheduler and all. 
