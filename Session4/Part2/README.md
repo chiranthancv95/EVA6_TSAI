@@ -20,7 +20,59 @@
 
 ![image](https://user-images.githubusercontent.com/11936036/120030179-c2805000-c014-11eb-8020-94fafc0c7503.png)
 
-**Neural Network Architecture:**
+## Data Augmentations:
+RandomRotation and RandomAffine 
 
-![image](https://user-images.githubusercontent.com/11936036/120030398-0a9f7280-c015-11eb-9111-23668c2a68d0.png)
+Concatenated the train data twice one set with data augmentations and other without augmentations    
+
+    train_loader = torch.utils.data.DataLoader(
+        ConcatDataset([
+                    datasets.MNIST('../data', train=True, download=True,
+                        transform=transforms.Compose([
+                            transforms.ToTensor(),
+                            transforms.Normalize((0.1307,), (0.3081,))
+                        ])),
+                    datasets.MNIST('../data', train=True, download=True,
+                        transform=transforms.Compose([
+                            transforms.ToTensor(),
+                            transforms.RandomRotation(10),
+                            transforms.RandomAffine(degrees=10, shear=45),
+                            transforms.Normalize((0.1307,), (0.3081,))
+                        ])),
+        ]),batch_size=batch_size, shuffle=True, **kwargs) 
+
+
+### Model Summary : 
+![Model Summary](./images/NetworkSummary.png)
+
+### Optimizer and Learning Rate
+Used three learning rates based on accuracy
+
+    model =  Net().to(device)
+    optimizer1 = optim.SGD(model.parameters(), lr=0.05, momentum=0.9)
+    optimizer2 = optim.SGD(model.parameters(), lr=0.02, momentum=0.9)
+    optimizer3 = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+    EPOCHS = 20
+    acc = 0
+    for epoch in range(EPOCHS):
+        print("EPOCH:", epoch)
+        if acc < 99.35:
+        train(model, device, train_loader, optimizer1, epoch)
+        acc = test(model, device, test_loader)
+        elif (acc>99.35) & (acc<99.42) :
+        train(model, device, train_loader, optimizer2, epoch)
+        acc = test(model, device, test_loader)
+        elif acc>99.42:
+        train(model, device, train_loader, optimizer3, epoch)
+        acc = test(model, device, test_loader)
+
+
+### Loss - Error Graph: 
+![Loss Error Plot](./images/LossErrorGraph.png)
+
+### Correct and Incorrect Predictions : 
+![Correct Predictions](./images/CorrectPredictions.png)
+
+![Incorrect Predictions](./images/WrongPredictions.png)
+
 
