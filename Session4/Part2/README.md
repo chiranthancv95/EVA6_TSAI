@@ -8,7 +8,9 @@
 
 ## Part 2 - MNIST DIGITS PYTORCH CLASSIFIER
 
-**Best solution Results** : Achieved 99.52% Accuracy on Test Data on 19th Epoch with Total Trainable Params: 19,834. 
+## Results
+Maximum Test Accuracy - 99.52%
+Maximum Train Accuracy - 98.87%
 
 **Key Steps** : 
 1. We Started with augmenting the training data. We applied Random Rotations, Scaling, Shearing transformations.
