@@ -19,7 +19,7 @@ When ready, attempt S5-Assignment Solution
 
 1. The assignment is done in 4 steps.
 2. Each of the steps, has the respective, target, results and analysis written at the end.
-3. The Step 4 is considered to be the best approach so far.
+3. The Step4 notebook is considered to be the best approach so far.
 4. The data files for the MNIST Dataset is also present in the repo itself, for ease of use.
 5. All the notebooks have been written based on usage of this data file itself and is not downloading anything from internet.
 
