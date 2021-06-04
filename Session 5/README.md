@@ -29,4 +29,8 @@ When ready, attempt S5-Assignment Solution
 Jayasankar Raju S - muralis2raj@gmail.com     
 CV Chiranthan - chiranthancv95@gmail.com <br>
 Sarthak - sarthak221995@gmail.com<br>
+<<<<<<< HEAD
 Mayank Singhal - singhal.mayank77@gmail.com<br>
+=======
+Mayank Singhal - singhal.mayank77@gmail.com<br>
+>>>>>>> 0a32bf153bbd45d126d8d2a1dba0df49941f044a
