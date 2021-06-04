@@ -1,6 +1,6 @@
 # Session 5 - Coding Drill Down Assignment
 
-##Assignment:
+## Assignment:
 
 ### Your new target is:
 99.4% (this must be consistently shown in your last few epochs, and not a one-time achievement)
@@ -22,3 +22,11 @@ When ready, attempt S5-Assignment Solution
 3. The Step 4 is considered to be the best approach so far.
 4. The data files for the MNIST Dataset is also present in the repo itself, for ease of use.
 5. All the notebooks have been written based on usage of this data file itself and is not downloading anything from internet.
+
+
+ Team
+ ----   
+Jayasankar Raju S - muralis2raj@gmail.com     
+CV Chiranthan - chiranthancv95@gmail.com <br>
+Sarthak - sarthak221995@gmail.com<br>
+Mayank Singhal - singhal.mayank77@gmail.com<br>
