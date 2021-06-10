@@ -2,26 +2,28 @@
 
 ## Assignment:
 
-### Your new target is:
-99.4% (this must be consistently shown in your last few epochs, and not a one-time achievement)
-Less than or equal to 15 Epochs
-Less than 10000 Parameters (additional points for doing this in less than 8000 pts)
-Do this in exactly 3 steps
-Each File must have "target, result, analysis" TEXT block (either at the start or the end)
-You must convince why have you decided that your target should be what you have decided it to be, and your analysis MUST be correct. 
-Evaluation is highly subjective, and if you target anything out of the order, marks will be deducted. 
-Explain your 3 steps using these target, results, and analysis with links to your GitHub files (Colab files moved to GitHub). 
-Keep Receptive field calculations handy for each of your models. 
-If your GitHub folder structure or file_names are messy, -100. 
-When ready, attempt S5-Assignment Solution
+Your 6th Assignment is:
 
-### Info
-
-1. The assignment is done in 4 steps.
-2. Each of the steps, has the respective, target, results and analysis written at the end.
-3. The Step4 notebook is considered to be the best approach so far.
-4. The data files for the MNIST Dataset is also present in the repo itself, for ease of use.
-5. All the notebooks have been written based on usage of this data file itself and is not downloading anything from internet.
+You are making 3 versions of your 5th assignment's best model (or pick one from best assignments):
+Network with Group Normalization
+Network with Layer Normalization
+Network with L1 + BN
+You MUST:
+Write a single model.py file that includes GN/LN/BN and takes an argument to decide which normalization to include
+Write a single notebook file to run all the 3 models above for 20 epochs each
+Create these graphs:
+Graph 1: Test/Validation Loss for all 3 models together
+Graph 2: Test/Validation Accuracy for 3 models together
+graphs must have proper annotation
+Find 10 misclassified images for each of the 3 models, and show them as a 5x2 image matrix in 3 separately annotated images. 
+write an explanatory README file that explains:
+what is your code all about,
+how to perform the 3 covered normalization (cannot use values from the excel sheet shared)
+your findings for normalization techniques,
+add all your graphs
+your 3 collection-of-misclassified-images 
+Upload your complete assignment on GitHub and share the link on LMS
+Mention the name of your partners who are doing the assignment. If someone submits separately, then we will see who scored lowest, and we will assign the lowest to all. If there are NO partners, then mention there are NO parters and make sure NO one mentions your name. 
 
 
  Team
