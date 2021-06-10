@@ -25,6 +25,9 @@ your 3 collection-of-misclassified-images
 Upload your complete assignment on GitHub and share the link on LMS
 Mention the name of your partners who are doing the assignment. If someone submits separately, then we will see who scored lowest, and we will assign the lowest to all. If there are NO partners, then mention there are NO parters and make sure NO one mentions your name. 
 
+### Usage - 
+```bash python main --norm group --epochs 25
+```
 
  Team
  ----   
