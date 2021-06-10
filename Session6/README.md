@@ -1,4 +1,4 @@
-# Session 5 - Coding Drill Down Assignment
+# Session 6 - BATCH NORMALIZATION & REGULARIZATION
 
 ## Assignment:
 
