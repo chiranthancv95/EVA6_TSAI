@@ -18,7 +18,7 @@ def train(model, device, train_loader, optimizer, epoch):
     pbar = tqdm(train_loader)
     correct = 0
     processed = 0
-    lambda_l1 = 1e-5
+    lambda_l1 = 0.01
 
     optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 
@@ -60,3 +60,4 @@ def train(model, device, train_loader, optimizer, epoch):
 
         pbar.set_description(desc= f'Loss={loss.item()} Batch_id={batch_idx} Accuracy={100*correct/processed:0.2f}')
         train_acc.append(100*correct/processed)
+    return train_losses, train_acc

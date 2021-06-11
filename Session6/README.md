@@ -30,12 +30,57 @@ Mention the name of your partners who are doing the assignment. If someone submi
 python main --norm group --epochs 25
 ```
 
+Note - options available are bn+l1, group and layer normalization experiments
+
+## Info - 
+The notebook '3models_notebook.ipynb' contains all the 3 models with batchnorm, group and layer normalization experiments.<br>
+It contains all the Graphs and misclassfied images displayed.<br>
+
+## Normalization Excel workout
+
+Normalizations.xlsx
+
+## Inference on experiments
+
+1. Batchnorm + L1 - 
+This experiment yielded good results, compratively to other experiments.
+The test accuracy has actually dropped when compared with just the batchnorm experiment.<br>
+Adding the L1 loss, has introduced a higher loss than usual.
+So, it needs adjustment and requires recalculation of lambda_l1. parameter.
+
+2. Group Normalization - 
+This experiment is done using the Group Normalization.
+The groups were split up into half of the number of output channels.
+This was done to get the gamma and beta parameters are calculated equally throughout.
+But, according to the results(found in the notebook), we can see that there is a large drop in accuracy here compared to bn experiment.
+So, for additional steps, we could create groups of different sizes and experiment with that later.
+
+3. Layer Normalization - 
+This experiment is done using the Layer normalization.
+The Pytorch layer of Group Norm has been used with a slight modfication making the number of groups as 1 to convert it to use layer normalization.
+We see that, the test accuracy we got for this experiment is slightly better than the Group Normalization around 2%.
+
+## Graph 1: Test/Validation Loss for all 3 models together
+
+![Graph 1: Test/Validation Loss for all 3 models together](./Graph1_Test_Loss.jpg)
+
+## Graph 2: Test/Validation Accuracy for 3 models together
+
+![Graph 2: Test/Validation Accuracy for 3 models together](./Graph2_Test_Accuracy.jpg)
+
+## 3 collection-of-misclassified-images 
+
+![bn_experiment_misclassified_images](./bn_experiment_misclassified_images.jpg)
+
+
+![group_experiment_misclassified_images](./group_experiment_misclassified_images.jpg)
+
+
+![layer_experiment_misclassified_images](./layer_experiment_misclassified_images.jpg)
+
  Team
- ----   
-Jayasankar Raju S - muralis2raj@gmail.com     
+ ----      
 CV Chiranthan - chiranthancv95@gmail.com <br>
 Sarthak - sarthak221995@gmail.com<br>
-
-Mayank Singhal - singhal.mayank77@gmail.com(May not submit the assignment since affected by Covid)<br>
 
 
