@@ -2,8 +2,6 @@
 
 ## Assignment:
 
-Your 6th Assignment is:
-
 You are making 3 versions of your 5th assignment's best model (or pick one from best assignments):
 Network with Group Normalization
 Network with Layer Normalization
