@@ -37,7 +37,7 @@ It contains all the Graphs and misclassfied images displayed.<br>
 
 ## Normalization Excel workout
 
-[Normalization Worksheet](https://github.com/chiranthancv95/EVA6_TSAI/blob/main/Session6/Normalizations.xlsx)
+[Normalization Worksheet](https://github.com/chiranthancv95/EVA6_TSAI/blob/main/Session6/Normalization_Worksheet/Normalizations.xlsx)
 
 
 ## Inference on experiments
@@ -62,21 +62,21 @@ We see that, the test accuracy we got for this experiment is slightly better tha
 
 ## Graph 1: Test/Validation Loss for all 3 models together
 
-![Graph 1: Test/Validation Loss for all 3 models together](./Graph1_Test_Loss.jpg)
+![Graph 1: Test/Validation Loss for all 3 models together](./images/Graph1_Test_Loss.jpg)
 
 ## Graph 2: Test/Validation Accuracy for 3 models together
 
-![Graph 2: Test/Validation Accuracy for 3 models together](./Graph2_Test_Accuracy.jpg)
+![Graph 2: Test/Validation Accuracy for 3 models together](./images/Graph2_Test_Accuracy.jpg)
 
 ## 3 collection-of-misclassified-images 
 
-![bn_experiment_misclassified_images](./bn_experiment_misclassified_images.jpg)
+![bn_experiment_misclassified_images](./images/bn_experiment_misclassified_images.jpg)
 
 
-![group_experiment_misclassified_images](./group_experiment_misclassified_images.jpg)
+![group_experiment_misclassified_images](./images/group_experiment_misclassified_images.jpg)
 
 
-![layer_experiment_misclassified_images](./layer_experiment_misclassified_images.jpg)
+![layer_experiment_misclassified_images](./images/layer_experiment_misclassified_images.jpg)
 
  Team
  ----      
