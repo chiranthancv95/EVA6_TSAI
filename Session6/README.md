@@ -38,7 +38,8 @@ It contains all the Graphs and misclassfied images displayed.<br>
 
 ## Normalization Excel workout
 
-Normalizations.xlsx
+[Normalization Worksheet](https://github.com/chiranthancv95/EVA6_TSAI/blob/main/Session6/Normalizations.xlsx)
+
 
 ## Inference on experiments
 
