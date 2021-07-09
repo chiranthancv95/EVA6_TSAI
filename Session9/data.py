@@ -18,9 +18,9 @@ def calculate_mean_std(self):
         return mean, std
 
 def load_train():
-	'''
-	Function to load train dataset and apply transforms
-	'''
+    '''
+    Function to load train dataset and apply transforms
+    '''
 
     # train_transforms = A.Compose({
     #       A.Normalize((0.49139968, 0.48215841, 0.44653091), (0.24703223, 0.24348513, 0.26158784)),
@@ -45,22 +45,22 @@ def load_train():
 	trainset = datasets.CIFAR10(root='./data', train=True,
                         download=True, transform=train_transforms)
 
-	# dataloader arguments - something you'll fetch these from cmdprmt
-	dataloader_args = dict(shuffle=False, batch_size=512, num_workers=1, pin_memory=True) if cuda else dict(shuffle=True, batch_size=64)
+    # dataloader arguments - something you'll fetch these from cmdprmt
+    dataloader_args = dict(shuffle=False, batch_size=512, num_workers=1, pin_memory=True) if cuda else dict(shuffle=True, batch_size=64)
 
-	# train dataloader
-	train_loader = torch.utils.data.DataLoader(trainset, **dataloader_args)
-	return train_loader
+    # train dataloader
+    train_loader = torch.utils.data.DataLoader(trainset, **dataloader_args)
+    return train_loader
 
 
 
 def load_test():
-	'''
-	Function to load test dataset and apply transforms
-	'''
+    '''
+    Function to load test dataset and apply transforms
+    '''
 
 
-	test_transforms = transforms.Compose([
+    test_transforms = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261))
     ])
@@ -68,9 +68,9 @@ def load_test():
     testset = datasets.CIFAR10(root='./data', download=True, transform=test_transform)
 
     # dataloader arguments - something you'll fetch these from cmdprmt
-	dataloader_args = dict(shuffle=False, batch_size=512, num_workers=1, pin_memory=True) if cuda else dict(shuffle=True, batch_size=64)
+    dataloader_args = dict(shuffle=False, batch_size=512, num_workers=1, pin_memory=True) if cuda else dict(shuffle=True, batch_size=64)
 
-	# test dataloader
-	test_loader = torch.utils.data.DataLoader(testset, **dataloader_args)
+    # test dataloader
+    test_loader = torch.utils.data.DataLoader(testset, **dataloader_args)
 
     return test_loader
