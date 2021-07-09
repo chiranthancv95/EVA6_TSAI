@@ -40,9 +40,9 @@ def false_plotter(false_predictions, exp_name):
 
 
 def plot_graphs(train_losses, test_losses, train_accuracy, test_accuracy):
-	'''
-	Function which plots graphs for train and test accuracy and loss
-	'''
+    '''
+    Function which plots graphs for train and test accuracy and loss
+    '''
     sns.set(style='whitegrid')
     sns.set(font_scale=1.5)
     plt.rcParams["figure.figsize"] = (20, 10)

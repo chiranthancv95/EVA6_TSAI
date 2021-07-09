@@ -17,7 +17,7 @@ from torch.optim.lr_scheduler import StepLR,OneCycleLR
 
 from train import *
 from test import *
-from model import *
+#from model import *
 from plotter import *
 from data import *
 # from model_group_norm import *
