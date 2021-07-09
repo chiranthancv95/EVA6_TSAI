@@ -29,7 +29,7 @@ def load_train():
     #       A.CoarseDropout(1, 16, 16, 1, 16, 16,fill_value=0.473363, mask_fill_value=None),
     #       A.ToGray(),
     #       A.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.247, 0.243, 0.261)),
-		  # ToTensorV2(),
+          # ToTensorV2(),
     #   })
 
     #A.PadIfNeeded(min_height=40, min_width=40, always_apply=True)
@@ -42,7 +42,7 @@ def load_train():
                                       ToTensorV2()
                                     })
 
-	trainset = datasets.CIFAR10(root='./data', train=True,
+    trainset = datasets.CIFAR10(root='./data', train=True,
                         download=True, transform=train_transforms)
 
     # dataloader arguments - something you'll fetch these from cmdprmt
