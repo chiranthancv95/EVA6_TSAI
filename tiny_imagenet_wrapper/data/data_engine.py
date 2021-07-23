@@ -20,7 +20,7 @@ class DataEngine(object):
 	def _transforms(self):
 		# Data Transformations
 		train_transform = albumentations_transforms(p=1.0, is_train=True)
-		test_transform = albumentations_transforms(p=1.0, is_train=False)
+		test_transform =  albumentations_transforms_test(p=1.0, is_train=False)
 		return train_transform, test_transform
 
 	def _dataset(self):
