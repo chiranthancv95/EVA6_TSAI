@@ -5,7 +5,8 @@ from albumentations import (
     RandomCrop,
     PadIfNeeded,
     RGBShift,
-    Rotate
+    Rotate,
+    Cutout
 )
 from albumentations.pytorch import ToTensor
 import numpy as np
