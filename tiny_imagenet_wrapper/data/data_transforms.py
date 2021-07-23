@@ -50,6 +50,16 @@ def albumentations_transforms(p=1.0, is_train=False):
     transforms_result = A.Compose(train_transforms)
     return lambda img:transforms_result(image=np.array(img))["image"]
 
+def albumentations_transforms_test():
+    mean = [0.4802, 0.4481, 0.3975]
+    std = [0.2302, 0.2265, 0.2262]
+
+    test_transform = [
+        A.Normalize(mean=mean, std=std),
+        ToTensor()]
+    transforms_result = A.Compose(test_transform)
+    return lambda img:transforms_result(image=np.array(img))["image"]
+
 # def torch_transforms(is_train=False):
 # 	# Mean and standard deviation of train dataset
 # 	mean = (0.4914, 0.4822, 0.4465)
