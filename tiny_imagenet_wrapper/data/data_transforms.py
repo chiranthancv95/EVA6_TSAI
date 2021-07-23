@@ -15,28 +15,18 @@ def albumentations_transforms(p=1.0, is_train=False):
 	# Mean and standard deviation of train dataset
 	mean = np.array([0.4914, 0.4822, 0.4465])
 	std = np.array([0.2023, 0.1994, 0.2010])
-	transforms_list = []
+	#transforms_list = []
 	# Use data aug only for train data
 	if is_train:
-		transforms_list.extend([
-			PadIfNeeded(min_height=72, min_width=72, p=1.0),
-			RandomCrop(height=64, width=64, p=1.0),
-			HorizontalFlip(p=0.25),
-			Rotate(limit=15, p=0.25),
-			RGBShift(r_shift_limit=20, g_shift_limit=20, b_shift_limit=20, p=0.25),
-			#CoarseDropout(max_holes=1, max_height=32, max_width=32, min_height=8,
-						#min_width=8, fill_value=mean*255.0, p=0.5),
-		])
-	transforms_list.extend([
-		Normalize(
-			mean=mean,
-			std=std,
-			max_pixel_value=255.0,
-			p=1.0
-		),
-		ToTensor()
-	])
-	data_transforms = Compose(transforms_list, p=p)
+		train_transforms = [
+			A.Normalize(mean=mean, std=std),
+			A.PadIfNeeded(min_height=40, min_width=40, border_mode=4, always_apply=True, p=1.0),
+			A.RandomCrop (32, 32, always_apply=True, p=1.0),
+			A.HorizontalFlip(p=0.5),
+			A.Cutout(num_holes=1, max_h_size=8, max_w_size=8, fill_value=mean, always_apply=False, p=1),
+			ToTensor()
+			]
+	data_transforms = Compose(train_transforms, p=p)
 	return lambda img: data_transforms(image=np.array(img))["image"]
 
 def torch_transforms(is_train=False):
