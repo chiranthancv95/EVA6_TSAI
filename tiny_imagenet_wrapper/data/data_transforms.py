@@ -50,23 +50,23 @@ def albumentations_transforms(p=1.0, is_train=False):
     transforms_result = A.Compose(train_transforms)
     return lambda img:transforms_result(image=np.array(img))["image"]
 
-def torch_transforms(is_train=False):
-	# Mean and standard deviation of train dataset
-	mean = (0.4914, 0.4822, 0.4465)
-	std = (0.2023, 0.1994, 0.2010)
-	transforms_list = []
-	# Use data aug only for train data
-	if is_train:
-		transforms_list.extend([
-			transforms.RandomCrop(64, padding=4),
-			transforms.RandomHorizontalFlip(),
-		])
-	transforms_list.extend([
-		transforms.ToTensor(),
-		transforms.Normalize(mean, std),
-	])
-	if is_train:
-		transforms_list.extend([
-			transforms.RandomErasing(0.25)
-		])
-	return transforms.Compose(transforms_list)
+# def torch_transforms(is_train=False):
+# 	# Mean and standard deviation of train dataset
+# 	mean = (0.4914, 0.4822, 0.4465)
+# 	std = (0.2023, 0.1994, 0.2010)
+# 	transforms_list = []
+# 	# Use data aug only for train data
+# 	if is_train:
+# 		transforms_list.extend([
+# 			transforms.RandomCrop(64, padding=4),
+# 			transforms.RandomHorizontalFlip(),
+# 		])
+# 	transforms_list.extend([
+# 		transforms.ToTensor(),
+# 		transforms.Normalize(mean, std),
+# 	])
+# 	if is_train:
+# 		transforms_list.extend([
+# 			transforms.RandomErasing(0.25)
+# 		])
+# 	return transforms.Compose(transforms_list)
