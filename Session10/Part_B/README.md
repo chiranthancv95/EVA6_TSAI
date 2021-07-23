@@ -37,20 +37,20 @@ Classes contained in the Dataset inlcude - <br>
 
 ### Some additional info on the Dataset - 
 
-RangeIndex: 10105 entries, 0 to 10104
-Data columns (total 8 columns):
- -   Column       Non-Null Count  Dtype  
----  ------       --------------  -----  
- 0   id           10105 non-null  int64  
- 1   height       10105 non-null  float64
- 2   width        10105 non-null  float64
- 3   x            10105 non-null  float64
- 4   y            10105 non-null  float64
- 5   bbox_width   10105 non-null  float64
- 6   bbox_height  10105 non-null  float64
- 7   class        10105 non-null  object 
-dtypes: float64(6), int64(1), object(1)
-memory usage: 631.7+ KB
+RangeIndex: 10105 entries, 0 to 10104<br>
+Data columns (total 8 columns):<br>
+ -   Column       Non-Null Count  Dtype  <br>
+---  ------       --------------  -----  <br>
+ 0   id           10105 non-null  int64  <br>
+ 1   height       10105 non-null  float64<br><br>
+ 2   width        10105 non-null  float64<br>
+ 3   x            10105 non-null  float64<br><br>
+ 4   y            10105 non-null  float64<br>
+ 5   bbox_width   10105 non-null  float64<br><br>
+ 6   bbox_height  10105 non-null  float64<br>
+ 7   class        10105 non-null  object <br>
+dtypes: float64(6), int64(1), object(1)<br>
+memory usage: 631.7+ KB<br>
 
 ## Finding k-means for n_clusters = 3
 
