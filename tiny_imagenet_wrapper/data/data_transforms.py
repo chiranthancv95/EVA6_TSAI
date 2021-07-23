@@ -8,6 +8,7 @@ from albumentations import (
     Rotate,
     Cutout
 )
+import albumentations as A
 from albumentations.pytorch import ToTensor
 import numpy as np
 import torchvision.transforms as transforms
