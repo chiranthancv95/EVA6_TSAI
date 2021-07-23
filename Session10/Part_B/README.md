@@ -39,7 +39,7 @@ Classes contained in the Dataset inlcude - <br>
 
 RangeIndex: 10105 entries, 0 to 10104
 Data columns (total 8 columns):
- #   Column       Non-Null Count  Dtype  
+ -   Column       Non-Null Count  Dtype  
 ---  ------       --------------  -----  
  0   id           10105 non-null  int64  
  1   height       10105 non-null  float64
