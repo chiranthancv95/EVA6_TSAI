@@ -1,7 +1,7 @@
 import torch
 import torchvision
 
-from .data_transforms import albumentations_transforms, torch_transforms
+from .data_transforms import albumentations_transforms,albumentations_transforms_test
 from utils import has_cuda, imshow
 
 class DataEngine(object):
