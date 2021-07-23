@@ -38,6 +38,7 @@ def albumentations_transforms(p=1.0, is_train=False):
     Returns:
         list of transforms'''
     mean = (0.491, 0.482, 0.446)
+    std = (0.2302, 0.2265, 0.2262)
     mean = np.mean(mean)
     train_transforms = [
         A.Normalize(mean=mean, std=std),
