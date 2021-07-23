@@ -9,7 +9,7 @@ from albumentations import (
     Cutout
 )
 import albumentations as A
-from albumentations.pytorch import ToTensor
+from albumentations.pytorch import ToTensorV2
 import numpy as np
 import torchvision.transforms as transforms
 
@@ -26,7 +26,7 @@ def albumentations_transforms_old(p=1.0, is_train=False):
 			A.RandomCrop (32, 32, always_apply=True, p=1.0),
 			A.HorizontalFlip(p=0.5),
 			A.Cutout(num_holes=1, max_h_size=8, max_w_size=8, always_apply=False, p=1),
-			ToTensor()
+			ToTensorV2()
 			]
 	data_transforms = Compose(train_transforms, p=p)
 	return lambda img: data_transforms(image=np.array(img))["image"]
