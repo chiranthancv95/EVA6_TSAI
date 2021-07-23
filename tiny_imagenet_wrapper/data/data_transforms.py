@@ -51,7 +51,7 @@ def albumentations_transforms(p=1.0, is_train=False):
     transforms_result = A.Compose(train_transforms)
     return lambda img:transforms_result(image=np.array(img))["image"]
 
-def albumentations_transforms_test():
+def albumentations_transforms_test(p=1.0, is_train=False):
     mean = [0.4802, 0.4481, 0.3975]
     std = [0.2302, 0.2265, 0.2262]
 
