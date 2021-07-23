@@ -13,7 +13,7 @@ from albumentations.pytorch import ToTensor
 import numpy as np
 import torchvision.transforms as transforms
 
-def albumentations_transforms(p=1.0, is_train=False):
+def albumentations_transforms_old(p=1.0, is_train=False):
 	# Mean and standard deviation of train dataset
 	mean = np.array([0.4914, 0.4822, 0.4465])
 	std = np.array([0.2023, 0.1994, 0.2010])
@@ -30,6 +30,25 @@ def albumentations_transforms(p=1.0, is_train=False):
 			]
 	data_transforms = Compose(train_transforms, p=p)
 	return lambda img: data_transforms(image=np.array(img))["image"]
+
+def albumentations_transforms(p=1.0, is_train=False):
+    '''Applies image augmentations to image dataset 
+    RandomCrop 32, 32 (after padding of 4) >> FlipLR >> Followed by CutOut(8, 8)
+    
+    Returns:
+        list of transforms'''
+    mean = (0.491, 0.482, 0.446)
+    mean = np.mean(mean)
+    train_transforms = [
+        A.Normalize(mean=mean, std=std),
+        A.PadIfNeeded(min_height=40, min_width=40, border_mode=4, always_apply=True, p=1.0),
+        A.RandomCrop (32, 32, always_apply=True, p=1.0),
+        A.HorizontalFlip(p=0.5),
+        A.Cutout(num_holes=1, max_h_size=8, max_w_size=8, fill_value=mean, always_apply=False, p=1),
+        ToTensor()
+    ]
+    transforms_result = A.Compose(train_transforms)
+    return lambda img:transforms_result(image=np.array(img))["image"]
 
 def torch_transforms(is_train=False):
 	# Mean and standard deviation of train dataset
