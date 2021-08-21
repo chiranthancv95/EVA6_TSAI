@@ -2,7 +2,7 @@
 
 ## CapStone Project for EVA6 course from TSAI - 
 
-### ** Question - **
+### **Question -**
 
 As a part of the CAPSTONE project you need to explain missing:<br>
 1. We take the encoded image (dxH/32xW/32) and send it to Multi-Head Attention (FROM WHERE DO WE TAKE THIS ENCODED IMAGE?)<br>
