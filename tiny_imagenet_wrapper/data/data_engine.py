@@ -1,7 +1,7 @@
 import torch
 import torchvision
 
-from .data_transforms import albumentations_transforms, torch_transforms
+from .data_transforms import albumentations_transforms,albumentations_transforms_test
 from utils import has_cuda, imshow
 
 class DataEngine(object):
@@ -20,7 +20,7 @@ class DataEngine(object):
 	def _transforms(self):
 		# Data Transformations
 		train_transform = albumentations_transforms(p=1.0, is_train=True)
-		test_transform = albumentations_transforms(p=1.0, is_train=False)
+		test_transform =  albumentations_transforms_test(p=1.0, is_train=False)
 		return train_transform, test_transform
 
 	def _dataset(self):
